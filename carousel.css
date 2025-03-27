@@ -1,0 +1,72 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+}
+
+body {
+  margin: 0px;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main-container {
+  margin-top: 0px;
+  background: linear-gradient(
+    to bottom right,
+    rgb(165, 108, 1),
+    rgb(83, 1, 83)
+  );
+  min-height: 100vh;
+}
+
+.title {
+  text-align: center;
+  margin: 0px;
+  padding: 20px 0px;
+}
+
+.image-carousel {
+  display: flex;
+  margin: 20px;
+}
+
+.images {
+  display: flex;
+  justify-content: space-around;
+}
+
+.carousel-item {
+  width: 30%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-nav-button {
+  font-size: 5rem;
+}
+
+.carousel-nav-button,
+.carousel-dot {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.3);
+  transition: 0.2s ease-in-out;
+}
+
+.carousel-nav-button:hover,
+.carousel-dot:hover {
+  transform: scale(1.2);
+  color: white;
+}
+
+.carousel-controls {
+  text-align: center;
+}
