@@ -18,8 +18,9 @@ button {
   margin-top: 0px;
   background: linear-gradient(
     to bottom right,
-    rgb(165, 108, 1),
-    rgb(83, 1, 83)
+    rgb(83, 13, 175),
+    rgb(7, 5, 172),
+    rgb(0, 104, 104)
   );
   min-height: 100vh;
 }
@@ -28,6 +29,7 @@ button {
   text-align: center;
   margin: 0px;
   padding: 20px 0px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
 }
 
 .image-carousel {
@@ -50,7 +52,7 @@ button {
 }
 
 .carousel-nav-button {
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 .carousel-nav-button,
