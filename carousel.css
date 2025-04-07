@@ -34,6 +34,7 @@ button {
 
 .image-carousel {
   display: flex;
+  justify-content: center;
   margin: 20px;
 }
 
@@ -42,17 +43,18 @@ button {
   justify-content: space-around;
 }
 
-.carousel-item {
-  width: 30%;
-}
-
-.carousel-item img {
-  width: 100%;
+#slide {
+  width: 90%;
   height: auto;
 }
 
+#slide-container {
+  display: flex;
+  justify-content: center;
+}
+
 .carousel-nav-button {
-  font-size: 3rem;
+  padding: 0px 40px;
 }
 
 .carousel-nav-button,
