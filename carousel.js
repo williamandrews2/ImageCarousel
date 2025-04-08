@@ -1,9 +1,10 @@
-let i = 0;
+let index = 0;
 let images = [];
 let time = 3000; // time in ms
 let slideInterval;
 
 const slide = document.getElementById("slide");
+const navDots = document.getElementById("nav-dots");
 const previousButton = document.getElementById("previous-button");
 const nextButton = document.getElementById("next-button");
 
@@ -28,12 +29,12 @@ nextButton.addEventListener("click", () => {
 
 // change image
 function changeImg() {
-  slide.src = images[i];
+  slide.src = images[index];
 }
 
 // change index: -1 for previous and 1 for next
 function changeIndex(direction) {
-  i = (i + direction + images.length) % images.length;
+  index = (index + direction + images.length) % images.length;
 }
 
 function resetInterval() {
@@ -48,7 +49,22 @@ function startSlideshow() {
   }, time);
 }
 
+function renderDots() {
+  for (let i = 0; i < images.length; i++) {
+    const dot = document.createElement("button");
+    dot.className = "carousel-dot";
+    dot.innerText = "⚪";
+    dot.addEventListener("click", () => {
+      index = i;
+      changeImg();
+      resetInterval();
+    });
+    navDots.appendChild(dot);
+  }
+}
+
 window.onload = () => {
   changeImg();
+  renderDots();
   startSlideshow();
 };
