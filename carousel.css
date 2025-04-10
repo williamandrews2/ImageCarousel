@@ -64,7 +64,8 @@ button {
 }
 
 .carousel-nav-button:hover,
-.carousel-dot:hover {
+.carousel-dot:hover,
+.carousel-dot.active {
   transform: scale(1.2);
   color: white;
 }

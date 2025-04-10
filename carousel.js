@@ -30,6 +30,7 @@ nextButton.addEventListener("click", () => {
 // change image
 function changeImg() {
   slide.src = images[index];
+  highlightDot(index);
 }
 
 // change index: -1 for previous and 1 for next
@@ -54,6 +55,7 @@ function renderDots() {
     const dot = document.createElement("button");
     dot.className = "carousel-dot";
     dot.innerText = "⚪";
+    dot.setAttribute("data-index", i);
     dot.addEventListener("click", () => {
       index = i;
       changeImg();
@@ -61,6 +63,13 @@ function renderDots() {
     });
     navDots.appendChild(dot);
   }
+}
+
+function highlightDot(index) {
+  const dots = document.querySelectorAll(".carousel-dot");
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+  });
 }
 
 window.onload = () => {
